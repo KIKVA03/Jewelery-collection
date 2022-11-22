@@ -89,6 +89,7 @@ const Component = styled.footer`
             color: lightgray;
             background: transparent;
             border: 0.5px solid lightgray;
+            cursor: pointer;
         }
     }
 `;
