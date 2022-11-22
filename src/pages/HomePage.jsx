@@ -7,6 +7,7 @@ import GiftsComponent from "../components/HomePageComponents/GiftsComponent";
 import NowTrendinJewelry from "../components/HomePageComponents/NowTrendinJewelry";
 import InstagramComponent from "../components/HomePageComponents/InstagramComponent";
 import CommitmentComponent from "../components/HomePageComponents/CommitmentComponent";
+import Footer from "../components/HomePageComponents/Footer.jsx";
 
 const HomePage = () => {
     return (
@@ -30,6 +31,7 @@ const HomePage = () => {
             <NowTrendinJewelry title="NOW TRENDING" />
             <InstagramComponent title="INSTAGRAM" />
             <CommitmentComponent />
+            <Footer />
         </Component>
     );
 };

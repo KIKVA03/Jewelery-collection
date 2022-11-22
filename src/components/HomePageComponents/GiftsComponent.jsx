@@ -34,7 +34,7 @@ const Component = styled.div`
     }
     .giftButtonsWrapper {
         display: flex;
-        gap: 80px;
+        gap: 28px;
         flex-wrap: wrap;
 
         button {
