@@ -89,4 +89,11 @@ const Component = styled.div`
     flex-direction: column;
     gap: 88px;
   }
+
+  @media (max-width: 650px) {
+    section {
+      padding: 48px 40px;
+      gap: 40px;
+    }
+  }
 `;

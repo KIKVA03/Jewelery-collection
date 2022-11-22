@@ -113,7 +113,4 @@ const Component = styled.div`
       }
     }
   }
-
-  @media (max-width: 1400px) {
-  }
 `;
