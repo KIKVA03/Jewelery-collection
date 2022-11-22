@@ -20,13 +20,27 @@ const InstagramComponent = ({ title }) => {
           1400: { slidesPerView: 4 },
         }}
       >
-        <SwiperSlide className="singleInstagramPhotos"></SwiperSlide>
-        <SwiperSlide className="singleInstagramPhotos"></SwiperSlide>
-        <SwiperSlide className="singleInstagramPhotos"></SwiperSlide>
-        <SwiperSlide className="singleInstagramPhotos"></SwiperSlide>
-        <SwiperSlide className="singleInstagramPhotos"></SwiperSlide>
-        <SwiperSlide className="singleInstagramPhotos"></SwiperSlide>
-        <SwiperSlide className="singleInstagramPhotos"></SwiperSlide>
+        <SwiperSlide className="singleInstagramPhotos">
+          <img src="/images/blondeGirl.png" alt="" />
+        </SwiperSlide>
+        <SwiperSlide className="singleInstagramPhotos">
+          <img src="/images/blondeGirl.png" alt="" />
+        </SwiperSlide>
+        <SwiperSlide className="singleInstagramPhotos">
+          <img src="/images/blondeGirl.png" alt="" />
+        </SwiperSlide>
+        <SwiperSlide className="singleInstagramPhotos">
+          <img src="/images/blondeGirl.png" alt="" />
+        </SwiperSlide>
+        <SwiperSlide className="singleInstagramPhotos">
+          <img src="/images/blondeGirl.png" alt="" />
+        </SwiperSlide>
+        <SwiperSlide className="singleInstagramPhotos">
+          <img src="/images/blondeGirl.png" alt="" />
+        </SwiperSlide>
+        <SwiperSlide className="singleInstagramPhotos">
+          <img src="/images/blondeGirl.png" alt="" />
+        </SwiperSlide>
       </Swiper>
     </Component>
   );
@@ -47,8 +61,10 @@ const Component = styled.div`
     display: flex;
 
     .singleInstagramPhotos {
-      padding: 200px;
-      background-image: url("/images/blondeGirl.png");
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
