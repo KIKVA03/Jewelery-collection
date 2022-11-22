@@ -6,6 +6,7 @@ import ScrollNewjewelry from "../components/HomePageComponents/ScrollNewjewelry"
 import GiftsComponent from "../components/HomePageComponents/GiftsComponent";
 import NowTrendinJewelry from "../components/HomePageComponents/NowTrendinJewelry";
 import InstagramComponent from "../components/HomePageComponents/InstagramComponent";
+import CommitmentComponent from "../components/HomePageComponents/CommitmentComponent";
 
 const HomePage = () => {
     return (
@@ -28,6 +29,7 @@ const HomePage = () => {
             <GiftsComponent />
             <NowTrendinJewelry title="NOW TRENDING" />
             <InstagramComponent title="INSTAGRAM" />
+            <CommitmentComponent />
         </Component>
     );
 };
@@ -72,6 +74,10 @@ const Component = styled.div`
                 border: 0;
                 background-color: white;
                 cursor: pointer;
+            }
+            button:hover {
+                background-color: black;
+                color: white;
             }
         }
     }

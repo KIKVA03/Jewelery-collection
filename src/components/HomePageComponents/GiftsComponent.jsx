@@ -47,5 +47,8 @@ const Component = styled.div`
             border: 0.5px solid lightgray;
             cursor: pointer;
         }
+        button:hover {
+            background-color: lightgray;
+        }
     }
 `;

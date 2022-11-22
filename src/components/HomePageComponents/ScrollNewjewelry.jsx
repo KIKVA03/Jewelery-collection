@@ -20,7 +20,7 @@ const ScrollNewjewelry = ({ title }) => {
                 className="scrollJewelryWrapper"
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={16}
-                slidesPerView={4}
+                slidesPerView={4.5}
             >
                 <SwiperSlide className=".singleScrolJewelryItem">
                     <img src="/images/Rectangle 22.png" alt="error" />

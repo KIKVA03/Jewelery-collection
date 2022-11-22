@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { ArrowIcon } from "../icons";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -18,9 +18,9 @@ const NowTrendinJewelry = ({ title }) => {
             </p>
             <Swiper
                 className="scrollJewelryWrapper"
-                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                modules={[Pagination]}
                 spaceBetween={16}
-                slidesPerView={4}
+                slidesPerView={4.5}
             >
                 <SwiperSlide className=".singleScrolJewelryItem">
                     <img src="/images/Rectangle 22.png" alt="error" />
