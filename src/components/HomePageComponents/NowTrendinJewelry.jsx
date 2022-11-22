@@ -20,39 +20,44 @@ const NowTrendinJewelry = ({ title }) => {
         className="scrollJewelryWrapper"
         modules={[Pagination]}
         spaceBetween={16}
-        slidesPerView={4.5}
+        slidesPerView={1}
+        breakpoints={{
+          600: { slidesPerView: 2 },
+          1000: { slidesPerView: 3 },
+          1400: { slidesPerView: 4 },
+        }}
       >
-        <SwiperSlide className=".singleScrolJewelryItem">
+        <SwiperSlide className="singleScrolJewelryItem">
           <img src="/images/Rectangle 22.png" alt="error" />
           <p>Engraved gold ring</p>
           <p>Yellow gold, engraving</p>
           <p>$170</p>
         </SwiperSlide>
-        <SwiperSlide className=".singleScrolJewelryItem">
+        <SwiperSlide className="singleScrolJewelryItem">
           <img src="/images/Rectangle 22.png" alt="error" />
           <p>Engraved gold ring</p>
           <p>Yellow gold, engraving</p>
           <p>$170</p>
         </SwiperSlide>
-        <SwiperSlide className=".singleScrolJewelryItem">
+        <SwiperSlide className="singleScrolJewelryItem">
           <img src="/images/Rectangle 22.png" alt="error" />
           <p>Engraved gold ring</p>
           <p>Yellow gold, engraving</p>
           <p>$170</p>
         </SwiperSlide>
-        <SwiperSlide className=".singleScrolJewelryItem">
+        <SwiperSlide className="singleScrolJewelryItem">
           <img src="/images/Rectangle 22.png" alt="error" />
           <p>Engraved gold ring</p>
           <p>Yellow gold, engraving</p>
           <p>$170</p>
         </SwiperSlide>
-        <SwiperSlide className=".singleScrolJewelryItem">
+        <SwiperSlide className="singleScrolJewelryItem">
           <img src="/images/Rectangle 22.png" alt="error" />
           <p>Engraved gold ring</p>
           <p>Yellow gold, engraving</p>
           <p>$170</p>
         </SwiperSlide>
-        <SwiperSlide className=".singleScrolJewelryItem">
+        <SwiperSlide className="singleScrolJewelryItem">
           <img src="/images/Rectangle 22.png" alt="error" />
           <p>Engraved gold ring</p>
           <p>Yellow gold, engraving</p>
@@ -113,4 +118,7 @@ const Component = styled.div`
       }
     }
   }
+  @media (max-width: 650px) {
+    padding: 0 40px;
+  } ;
 `;
