@@ -1,113 +1,149 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  return (
-    <Component>
-      <div className="supportAndAboutWrapper">
-        <div className="SupportContainer">
-          <h3>SUPPORT</h3>
-          <p>FAQ</p>
-          <p>Shippin</p>
-          <p>Returns</p>
-          <p>Virtual Styling</p>
-          <p>Jewelry Care</p>
-          <p>Warranty</p>
-          <p>Ring Sizer</p>
-        </div>
+    return (
+        <Component>
+            <div className="supportAndAboutWrapper">
+                <div className="SupportContainer">
+                    <h3>SUPPORT</h3>
+                    <Link className="Link">FAQ</Link>
+                    <Link className="Link">Shippin</Link>
+                    <Link className="Link">Returns</Link>
+                    <Link className="Link">Virtual Styling</Link>
+                    <Link className="Link">Jewelry Care</Link>
+                    <Link className="Link">Warranty</Link>
+                    <Link className="Link">Ring Sizer</Link>
+                </div>
 
-        <div className="AboutUsContainer">
-          <h3>ABOUT US</h3>
-          <p>Missin</p>
-          <p>Work Flow</p>
-          <p>Contact US</p>
-          <p>Privacy & Policy</p>
-          <p>Terms & Conditions</p>
-          <p>© 2022 Jewelry</p>
-        </div>
-      </div>
+                <div className="AboutUsContainer">
+                    <h3>ABOUT US</h3>
+                    <Link className="AboutLink">Missin</Link>
+                    <Link className="AboutLink">Work Flow</Link>
+                    <Link className="AboutLink">Contact US</Link>
+                    <Link className="AboutLink">Privacy & Policy</Link>
+                    <Link className="AboutLink">Terms & Conditions</Link>
+                    <Link className="AboutLink">© 2022 Jewelry</Link>
+                </div>
+            </div>
 
-      <div className="JoinCommunityContainer">
-        <h3>JOIN THE COMMUNITY</h3>
-        <p>Insider info on new arrivals,early access,and everything fine</p>
-        <input type="email" placeholder="Email@example.com" />
-        <button>JOIN</button>
-      </div>
-    </Component>
-  );
+            <div className="JoinCommunityContainer">
+                <h3>JOIN THE COMMUNITY</h3>
+                <p>Insider info on new arrivals,early access,and everything fine</p>
+                <input type="email" placeholder="Email@example.com" />
+                <button>JOIN</button>
+            </div>
+        </Component>
+    );
 };
 
 export default Footer;
 const Component = styled.footer`
-  padding: 90px 0;
-  background: #faf7f3;
-  display: flex;
-  justify-content: space-around;
-
-  .supportAndAboutWrapper {
+    padding: 90px 0;
+    background: #faf7f3;
     display: flex;
-    justify-content: space-around;
-    flex: 1;
+    justify-content: space-between;
 
-    .SupportContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      h3 {
-        padding: 0 0 4px 0;
-        font-weight: 500;
-      }
-      p {
-        font-weight: 300;
-        font-size: 14px;
-      }
-    }
-    .AboutUsContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      h3 {
-        padding: 0 0 4px 0;
-        font-weight: 500;
-      }
-      p {
-        font-weight: 300;
-        font-size: 14px;
-      }
-    }
-  }
+    .supportAndAboutWrapper {
+        display: flex;
+        justify-content: space-around;
+        flex: 1;
 
-  .JoinCommunityContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    h3 {
-      padding: 0 0 4px 0;
-      font-weight: 500;
+        .SupportContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            h3 {
+                padding: 0 0 4px 0;
+                font-weight: 500;
+            }
+            .Link {
+                position: relative;
+                text-decoration: none;
+                font-weight: 300;
+                font-size: 14px;
+            }
+            .Link::after {
+                content: "";
+                height: 1px;
+                width: 0%;
+                position: absolute;
+                background-color: black;
+                bottom: 0;
+                left: 0;
+                transition: 0.5s;
+            }
+            .Link:hover::after {
+                height: 1px;
+                width: 100%;
+            }
+        }
+        .AboutUsContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            h3 {
+                padding: 0 0 4px 0;
+                font-weight: 500;
+            }
+            .AboutLink {
+                position: relative;
+                text-decoration: none;
+                font-weight: 300;
+                font-size: 14px;
+            }
+            .AboutLink::after {
+                content: "";
+                height: 1px;
+                width: 0%;
+                position: absolute;
+                background-color: black;
+                bottom: 0;
+                left: 0;
+                transition: 0.5s;
+            }
+            .AboutLink:hover::after {
+                height: 1px;
+                width: 100%;
+            }
+        }
     }
-    p {
-      font-weight: 300;
-      font-size: 14px;
-    }
-    input {
-      padding: 20px 0;
-      background-color: transparent;
-      border: none;
-      border-bottom: 0.5px solid black;
-      outline: 0;
-    }
-    button {
-      padding: 20px 170px;
-      color: lightgray;
-      background: transparent;
-      border: 0.5px solid lightgray;
-      cursor: pointer;
-    }
-  }
 
-  @media (max-width: 700px) {
-    padding: 45px 40px;
-    flex-direction: column;
-    gap: 40px;
-  } ;
+    .JoinCommunityContainer {
+        /* ATTEMTION */
+        /* მარგინი აქ არ უნდა ქონდეს */
+        margin-right: 90px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        h3 {
+            padding: 0 0 4px 0;
+            font-weight: 500;
+        }
+        p {
+            font-weight: 300;
+            font-size: 14px;
+        }
+        input {
+            padding: 20px 0;
+            background-color: transparent;
+            border: none;
+            border-bottom: 0.5px solid black;
+            outline: 0;
+        }
+        button {
+            padding: 20px 170px;
+            color: lightgray;
+            background: transparent;
+            border: 0.5px solid lightgray;
+            cursor: pointer;
+        }
+    }
+
+    @media (max-width: 700px) {
+        padding: 45px 40px;
+        flex-direction: column;
+        gap: 40px;
+    } ;
 `;
