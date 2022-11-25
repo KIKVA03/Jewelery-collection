@@ -8,7 +8,9 @@ const Footer = () => {
             <div className="supportAndAboutWrapper">
                 <div className="SupportContainer">
                     <h3>SUPPORT</h3>
-                    <Link className="Link">FAQ</Link>
+                    <Link className="Link">
+                        <span>FAQ</span>
+                    </Link>
                     <Link className="Link">Shippin</Link>
                     <Link className="Link">Returns</Link>
                     <Link className="Link">Virtual Styling</Link>
@@ -48,7 +50,7 @@ const Component = styled.footer`
     .supportAndAboutWrapper {
         display: flex;
         justify-content: space-around;
-        flex: 1;
+        flex: 2;
 
         .SupportContainer {
             display: flex;
@@ -63,20 +65,20 @@ const Component = styled.footer`
                 text-decoration: none;
                 font-weight: 300;
                 font-size: 14px;
-            }
-            .Link::after {
-                content: "";
-                height: 1px;
-                width: 0%;
-                position: absolute;
-                background-color: black;
-                bottom: 0;
-                left: 0;
-                transition: 0.5s;
-            }
-            .Link:hover::after {
-                height: 1px;
-                width: 100%;
+
+                &:after {
+                    content: "";
+                    height: 1px;
+                    width: 0%;
+                    position: absolute;
+                    background-color: black;
+                    bottom: 0;
+                    left: 0;
+                    transition: 0.5s;
+                }
+                &:hover::after {
+                    width: 100%;
+                }
             }
         }
         .AboutUsContainer {
@@ -111,12 +113,12 @@ const Component = styled.footer`
     }
 
     .JoinCommunityContainer {
-        /* ATTEMTION */
-        /* მარგინი აქ არ უნდა ქონდეს */
-        margin-right: 90px;
+        padding-right: 5%;
         display: flex;
         flex-direction: column;
+        flex: 1;
         gap: 12px;
+
         h3 {
             padding: 0 0 4px 0;
             font-weight: 500;
@@ -145,5 +147,9 @@ const Component = styled.footer`
         padding: 45px 40px;
         flex-direction: column;
         gap: 40px;
+
+        .JoinCommunityContainer {
+            padding: 0;
+        }
     } ;
 `;
