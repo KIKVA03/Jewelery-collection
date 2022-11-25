@@ -1,45 +1,25 @@
-import React from "react";
+import { useState, useCallback, memo } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { LogoIcon, CartIcon, SarchIcon, UserIcon } from "../icons";
-import { useState } from "react";
+import { LogoIcon, CartIcon, SarchIcon, UserIcon, BurgerIcon } from "../icons";
+import MobileNavigation from "../MobileNavigation";
 
 const Navigation = () => {
-    const [burger_class, setBurgerclass] = useState("burger-Bar Unclicked");
-    const [menu_class, setMenuClass] = useState("menu Hidden");
-    const [isMenuClicked, setIsMenuClicked] = useState(false);
+    const [isMobileNavShown, setIsMobileNavShown] = useState(false);
 
-    const burgerMenuClick = () => {
-        const a = !isMenuClicked;
-        setIsMenuClicked(a);
-        if (isMenuClicked) {
-            setBurgerclass("burger-Bar Clicked");
-            setMenuClass("menu Visable");
+    const toggleMobileNavBar = useCallback(() => {
+        setIsMobileNavShown(prev => !prev);
+    }, []);
 
-            // console.log;
-            console.log(burger_class);
-            console.log(menu_class);
-        } else {
-            setBurgerclass("burger-Bar Unclicked");
-            setMenuClass("menu Hidden");
-
-            console.log(burger_class);
-            console.log(menu_class);
-        }
-    };
     return (
         <Component>
+            {isMobileNavShown && <MobileNavigation toggleMobileNavBar={toggleMobileNavBar} />}
+
             <nav>
-                <div className="burgerMenu" onClick={() => burgerMenuClick()}>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div className={menu_class}>
-                    <h3>SHOP</h3>
-                    <h3>GIFT</h3>
-                    <h3>ABOUT</h3>
-                </div>
+                <button className="burgerMenu" onClick={toggleMobileNavBar}>
+                    <BurgerIcon />
+                </button>
+
                 <div className="linksWrapper">
                     <Link to="">SHOP</Link>
                     <Link to="">GiFT</Link>
@@ -70,7 +50,7 @@ const Navigation = () => {
     );
 };
 
-export default Navigation;
+export default memo(Navigation);
 
 const Component = styled.header`
     width: 100%;
@@ -105,37 +85,22 @@ const Component = styled.header`
         align-items: center;
     }
     .burgerMenu {
-        height: 14px;
-        width: 18px;
         display: none;
-        flex-direction: column;
-        gap: 4px;
-
-        div {
-            width: 100%;
-            height: 2px;
-            background-color: black;
-        }
     }
     @media (max-width: 700px) {
+        padding: 16px 30px;
+
         .burgerMenu {
+            border: none;
+            margin-right: 16px;
             display: flex;
         }
         .linksWrapper {
             display: none;
         }
         .LOGO-wrapper {
-            margin-left: 80px;
+            flex: 1;
+            justify-self: start;
         }
-    }
-    /* toogle menu */
-    .Hidden {
-        display: none;
-    }
-    .Visable {
-        width: 50%;
-        height: 10vh;
-        display: flex;
-        flex-direction: column;
     }
 `;
