@@ -15,7 +15,7 @@ const Navigation = () => {
         <Component>
             {isMobileNavShown && <MobileNavigation toggleMobileNavBar={toggleMobileNavBar} />}
 
-            <nav>
+            <nav className="navigation">
                 <button className="burgerMenu" onClick={toggleMobileNavBar}>
                     <BurgerIcon />
                 </button>
@@ -64,6 +64,11 @@ const Component = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .navigation {
+        display: flex;
+        align-items: center;
+    }
 
     .linksWrapper {
         font-size: 16px;

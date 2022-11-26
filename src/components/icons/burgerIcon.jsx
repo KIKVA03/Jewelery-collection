@@ -32,6 +32,7 @@ export default BurgerIcon;
 
 const Container = styled.div`
     .burgerWrapper {
+        height: 100%;
         background-color: white;
         border: 0;
         display: flex;

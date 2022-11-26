@@ -39,6 +39,10 @@ const Container = styled.div`
         }
     }
 
+    @media (min-width: 800px) {
+        display: none;
+    }
+
     @keyframes leftToRight {
         from {
             transform: translateX(-100%);
