@@ -1,13 +1,14 @@
 import { memo } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const MobileNavigation = ({ toggleMobileNavBar }) => {
     return (
         <Container>
             <div>
-                <h3>SHOP</h3>
-                <h3>GIFT</h3>
-                <h3>ABOUT</h3>
+                <Link className="mobileNavLinks">SHOP</Link>
+                <Link className="mobileNavLinks">GIFT</Link>
+                <Link className="mobileNavLinks">ABOUT</Link>
             </div>
         </Container>
     );
@@ -25,31 +26,17 @@ const Container = styled.div`
     flex-direction: column;
     gap: 13px;
     animation: leftToRight 1s;
-
-    header {
+    div {
         display: flex;
-        justify-content: space-between;
-
-        .LOGO-wrapper {
-            display: flex;
-            justify-content: center;
+        flex-direction: column;
+        .mobileNavLinks {
+            text-decoration: none;
+            padding: 29px 10px;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 100%;
+            border-bottom: 0.5px solid black;
         }
-
-        .Xicon-wraper {
-            margin-left: 16px;
-            border: none;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-        }
-    }
-
-    h3 {
-        padding: 29px 10px;
-        font-weight: 300;
-        font-size: 32px;
-        line-height: 100%;
-        border-bottom: 0.5px solid black;
     }
 
     @keyframes leftToRight {
