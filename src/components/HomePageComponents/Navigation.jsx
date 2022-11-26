@@ -94,6 +94,7 @@ const Component = styled.header`
             border: none;
             margin-right: 16px;
             display: flex;
+            align-items: center;
         }
         .linksWrapper {
             display: none;
