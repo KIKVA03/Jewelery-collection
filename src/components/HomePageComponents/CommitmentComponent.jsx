@@ -66,7 +66,7 @@ const Component = styled.div`
                 padding: 14px 80px;
                 font-weight: 500;
                 background-color: transparent;
-
+                transition-duration: 0.7s;
                 border: 1px solid black;
                 cursor: pointer;
             }

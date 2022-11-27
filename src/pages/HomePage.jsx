@@ -75,6 +75,7 @@ const Component = styled.div`
                 padding: 14px 80px;
                 border: 0;
                 background-color: white;
+                transition-duration: 0.7s;
                 cursor: pointer;
             }
             button:hover {

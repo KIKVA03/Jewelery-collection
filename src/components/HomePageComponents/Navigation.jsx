@@ -21,7 +21,7 @@ const Navigation = () => {
                 </button>
 
                 <div className="linksWrapper">
-                    <Link to="">SHOP</Link>
+                    <Link to="/shop">SHOP</Link>
                     <Link to="">GiFT</Link>
                     <Link to="">ABOUT</Link>
                 </div>
