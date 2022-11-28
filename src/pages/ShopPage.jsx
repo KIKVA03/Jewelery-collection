@@ -4,19 +4,38 @@ import ShopCategorise from "../components/ShopPageComponents/ShopCategorise";
 import styled from "styled-components";
 import ShopItAll from "../components/ShopPageComponents/ShopItAll";
 import Footer from "../components/HomePageComponents/Footer";
+import { CarIcon, ReturnIcon, ShieldIcon, CardIcon } from "../components/icons/index";
 
 const ShopPage = () => {
     return (
         <Component>
             <Navigation />
             <ShopCategorise />
-            <div className="div">
+            <div className="contentWrapper">
                 <ShopItAll />
-                <ShopItAll />
-                <ShopItAll />
-                <ShopItAll />
-                <ShopItAll />
+                <img src="/images/AdvertisamentBanner.png.png" alt="#" className="img" />
             </div>
+            <div className="greenSection">
+                <div>
+                    <CarIcon />
+                    <p>Free Shipping on</p>
+                    <p>Orders over $100</p>
+                </div>
+                <div>
+                    <ReturnIcon />
+                    <p>Free 60-Day Returns</p>
+                </div>
+                <div>
+                    <ShieldIcon />
+                    <p>2-Year Warranty</p>
+                </div>
+                <div>
+                    <CardIcon />
+                    <p>Shop Now, play Later</p>
+                    <p>With Klarna</p>
+                </div>
+            </div>
+
             <Footer />
         </Component>
     );
@@ -28,7 +47,45 @@ const Component = styled.div`
     display: flex;
     flex-direction: column;
 
-    .div {
+    .contentWrapper {
         margin-left: 25vw;
+
+        .img {
+            margin-top: 130px;
+            width: 100%;
+            padding-right: 40px;
+        }
+    }
+    .greenSection {
+        margin-top: 40px;
+        height: 143px;
+        width: 100%;
+        background: #9fd6c9;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: 15;
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 13px;
+        }
+    }
+
+    @media (max-width: 1030px) {
+        .contentWrapper {
+            margin-left: 48px;
+
+            .img {
+                padding-right: 0;
+            }
+        }
+    }
+    @media (max-width: 650px) {
+        .greenSection {
+            height: 246px;
+            flex-wrap: wrap;
+        }
     }
 `;

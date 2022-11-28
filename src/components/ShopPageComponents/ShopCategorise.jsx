@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const ShopCategorise = () => {
@@ -40,5 +40,9 @@ const Component = styled.div`
         font-size: 14px;
         line-height: 22px;
         cursor: pointer;
+    }
+
+    @media (max-width: 1030px) {
+        display: none;
     }
 `;

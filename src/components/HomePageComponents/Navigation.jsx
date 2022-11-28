@@ -27,9 +27,9 @@ const Navigation = () => {
                 </div>
             </nav>
 
-            <div className="LOGO-wrapper">
+            <Link to="/" className="LOGO-wrapper">
                 <LogoIcon />
-            </div>
+            </Link>
 
             <div className="iconsWrapper">
                 <Link to="">

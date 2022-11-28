@@ -6,7 +6,9 @@ const MobileNavigation = ({ toggleMobileNavBar }) => {
     return (
         <Container>
             <div>
-                <Link className="mobileNavLinks">SHOP</Link>
+                <Link to="/Shop" className="mobileNavLinks">
+                    SHOP
+                </Link>
                 <Link className="mobileNavLinks">GIFT</Link>
                 <Link className="mobileNavLinks">ABOUT</Link>
             </div>

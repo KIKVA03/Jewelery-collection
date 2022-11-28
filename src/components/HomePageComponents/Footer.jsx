@@ -46,6 +46,7 @@ const Component = styled.footer`
     background: #faf7f3;
     display: flex;
     justify-content: space-between;
+    z-index: 15;
 
     .supportAndAboutWrapper {
         display: flex;

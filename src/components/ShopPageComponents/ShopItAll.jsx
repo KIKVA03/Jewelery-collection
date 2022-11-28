@@ -22,38 +22,26 @@ const ShopItAll = () => {
                 <SwiperSlide className="singleScrolJewelryItem">
                     <img src="/images/Rectangle 22.png" alt="error" />
                     <p>Engraved gold ring</p>
-                    <p>Yellow gold, engraving</p>
-                    <p>$170</p>
                 </SwiperSlide>
                 <SwiperSlide className="singleScrolJewelryItem">
                     <img src="/images/Rectangle 22.png" alt="error" />
                     <p>Engraved gold ring</p>
-                    <p>Yellow gold, engraving</p>
-                    <p>$170</p>
                 </SwiperSlide>
                 <SwiperSlide className="singleScrolJewelryItem">
                     <img src="/images/Rectangle 22.png" alt="error" />
                     <p>Engraved gold ring</p>
-                    <p>Yellow gold, engraving</p>
-                    <p>$170</p>
                 </SwiperSlide>
                 <SwiperSlide className="singleScrolJewelryItem">
                     <img src="/images/Rectangle 22.png" alt="error" />
                     <p>Engraved gold ring</p>
-                    <p>Yellow gold, engraving</p>
-                    <p>$170</p>
                 </SwiperSlide>
                 <SwiperSlide className="singleScrolJewelryItem">
                     <img src="/images/Rectangle 22.png" alt="error" />
                     <p>Engraved gold ring</p>
-                    <p>Yellow gold, engraving</p>
-                    <p>$170</p>
                 </SwiperSlide>
                 <SwiperSlide className="singleScrolJewelryItem">
                     <img src="/images/Rectangle 22.png" alt="error" />
                     <p>Engraved gold ring</p>
-                    <p>Yellow gold, engraving</p>
-                    <p>$170</p>
                 </SwiperSlide>
             </Swiper>
         </Component>
@@ -92,18 +80,13 @@ const Component = styled.div`
             }
 
             p {
-                &:first-of-type {
-                    font-weight: 600;
-                }
-                &:nth-of-type(2) {
-                    font-weight: 400;
-                    font-size: 14px;
-                }
-                &:last-of-type {
-                    font-weight: 300;
-                    font-size: 14px;
-                }
+                font-weight: 600;
             }
+        }
+    }
+    @media (max-width: 1030px) {
+        h1 {
+            text-align: center;
         }
     }
 `;

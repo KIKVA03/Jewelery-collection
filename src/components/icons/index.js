@@ -5,3 +5,7 @@ export { default as UserIcon } from "./User";
 export { default as ArrowIcon } from "./Arrow";
 export { default as BurgerIcon } from "./burgerIcon";
 export { default as Xicon } from "./Xicon";
+export { default as CarIcon } from "./CarIcon";
+export { default as ShieldIcon } from "./Shield";
+export { default as ReturnIcon } from "./ReturnIcon";
+export { default as CardIcon } from "./CardIcon";
