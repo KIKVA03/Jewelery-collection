@@ -30,7 +30,7 @@ const Component = styled.div`
     padding-left: 48px;
     margin-top: 88px;
     background-color: transparent;
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     gap: 9px;

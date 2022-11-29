@@ -5,6 +5,8 @@ import styled from "styled-components";
 import ShopItAll from "../components/ShopPageComponents/ShopItAll";
 import Footer from "../components/HomePageComponents/Footer";
 import { CarIcon, ReturnIcon, ShieldIcon, CardIcon } from "../components/icons/index";
+import MoreWaysToBrows from "../components/ShopPageComponents/MoreWaysToBrows";
+import Filter from "../components/ShopPageComponents/Filter";
 
 const ShopPage = () => {
     return (
@@ -14,6 +16,7 @@ const ShopPage = () => {
             <div className="contentWrapper">
                 <ShopItAll />
                 <img src="/images/AdvertisamentBanner.png.png" alt="#" className="img" />
+                <Filter />
             </div>
             <div className="greenSection">
                 <div>
@@ -35,6 +38,7 @@ const ShopPage = () => {
                     <p>With Klarna</p>
                 </div>
             </div>
+            <MoreWaysToBrows />
 
             <Footer />
         </Component>
@@ -48,6 +52,7 @@ const Component = styled.div`
     flex-direction: column;
 
     .contentWrapper {
+        margin-top: 32px;
         margin-left: 25vw;
 
         .img {
@@ -58,18 +63,19 @@ const Component = styled.div`
     }
     .greenSection {
         margin-top: 40px;
-        height: 143px;
+        padding: 32px 0;
+        height: 100%;
         width: 100%;
         background: #9fd6c9;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        z-index: 15;
         div {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 13px;
+            cursor: pointer;
         }
     }
 
@@ -84,8 +90,10 @@ const Component = styled.div`
     }
     @media (max-width: 650px) {
         .greenSection {
-            height: 246px;
+            height: 100%;
+
             flex-wrap: wrap;
+            justify-content: center;
         }
     }
 `;

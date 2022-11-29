@@ -7,7 +7,7 @@ import styled from "styled-components";
 const ShopItAll = () => {
     return (
         <Component>
-            <h1>Shop It All</h1>
+            <h1>SHOP IT ALL</h1>
             <Swiper
                 className="swiper scrollJewelryWrapper"
                 modules={[Pagination]}
@@ -51,7 +51,7 @@ const ShopItAll = () => {
 export default ShopItAll;
 
 const Component = styled.div`
-    margin-top: 50px;
+    margin-top: 32px;
     display: flex;
     flex-direction: column;
     gap: 40px;
