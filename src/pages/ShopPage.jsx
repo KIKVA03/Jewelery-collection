@@ -115,6 +115,7 @@ const Component = styled.div`
     @media (max-width: 1030px) {
         .motherDiv {
             justify-content: center;
+            padding: 0 24px;
 
             .categoriseWrapper {
                 display: none;
@@ -128,15 +129,11 @@ const Component = styled.div`
     @media (max-width: 650px) {
         .greenSection {
             height: 100%;
-
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
             justify-content: center;
+            align-items: center;
         }
     }
 `;
-
-// {/* <div className="contentWrapper">
-//                 <ShopItAll />
-//                 <img src="/images/AdvertisamentBanner.png.png" alt="#" className="img" />
-//                 <Filter />
-//             </div> */}

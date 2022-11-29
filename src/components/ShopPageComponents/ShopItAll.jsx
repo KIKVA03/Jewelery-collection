@@ -83,7 +83,7 @@ const Component = styled.div`
         }
         .scrollJewelryWrapper {
             margin-right: 0;
-            width: 100%;
+            max-width: 100%;
         }
     }
 `;
