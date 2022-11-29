@@ -81,5 +81,9 @@ const Component = styled.div`
         h1 {
             text-align: center;
         }
+        .scrollJewelryWrapper {
+            margin-right: 0;
+            width: 100%;
+        }
     }
 `;

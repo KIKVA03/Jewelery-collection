@@ -61,6 +61,7 @@ export default ShopPage;
 const Component = styled.div`
     display: flex;
     flex-direction: column;
+    gap: 40px;
 
     .motherDiv {
         padding: 0 48px;
@@ -90,10 +91,9 @@ const Component = styled.div`
     }
 
     .greenSection {
-        margin-top: 40px;
-        padding: 32px 0;
         height: 100%;
         width: 100%;
+        padding: 32px 0;
         background: #9fd6c9;
         display: flex;
         align-items: center;
@@ -113,11 +113,15 @@ const Component = styled.div`
     }
 
     @media (max-width: 1030px) {
-        .contentWrapper {
-            margin-left: 48px;
+        .motherDiv {
+            justify-content: center;
 
-            .img {
-                padding-right: 0;
+            .categoriseWrapper {
+                display: none;
+            }
+            .contentWrapper {
+                width: 100%;
+                justify-content: center;
             }
         }
     }

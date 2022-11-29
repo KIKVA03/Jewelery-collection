@@ -21,7 +21,7 @@ const Container = styled.div`
 
     img {
         height: 300px;
-        aspect-ratio: 1 / 1;
+        width: 100%;
         object-fit: cover;
         object-position: center;
     }

@@ -76,4 +76,27 @@ const Container = styled.div`
             background-color: transparent;
         }
     }
+    @media (max-width: 1030px) {
+        .cardsWrapper {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 33%);
+            grid-column-gap: 16px;
+            grid-row-gap: 48px;
+            justify-content: center;
+        }
+    }
+    @media (max-width: 750px) {
+        .cardsWrapper {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 16px;
+            grid-row-gap: 20px;
+            justify-content: center;
+
+            img {
+            }
+        }
+    }
 `;

@@ -24,12 +24,11 @@ export default MoreWaysToBrows;
 
 const Component = styled.div`
     height: 100%;
-    padding: 0 80px 32px 80px;
+    padding: 0 80px;
     display: flex;
     flex-direction: column;
     gap: 40px;
     h3 {
-        margin-top: 52px;
         font-weight: 500;
         font-size: 18px;
         line-height: 21px;
