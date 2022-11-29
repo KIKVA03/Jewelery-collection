@@ -82,6 +82,7 @@ const Component = styled.header`
         }
     }
     .LOGO-wrapper {
+        display: flex;
         font-weight: 500;
     }
     .iconsWrapper {
@@ -89,9 +90,12 @@ const Component = styled.header`
         gap: 24px;
         align-items: center;
     }
+    select {
+    }
     .burgerMenu {
         display: none;
     }
+
     @media (max-width: 700px) {
         padding: 16px 30px;
 

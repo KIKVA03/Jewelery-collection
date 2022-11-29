@@ -1,61 +1,79 @@
 import React from "react";
 import styled from "styled-components";
+import JewelryCard from "../HomePageComponents/JewelryCard";
 
 const Filter = () => {
     return (
-        <Contauner>
+        <Container>
             <h3>FILTER</h3>
-            <div className="imgWrapper">
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <div className="buttonWrapper">
-                    <button>EXPLORE MORE</button>
-                </div>
+            <div className="cardsWrapper">
+                <JewelryCard
+                    prodactName="Engraved gold ring"
+                    nickName="Yellow gold, engraving"
+                    price="$170"
+                />
+                <JewelryCard
+                    prodactName="Engraved gold ring"
+                    nickName="Yellow gold, engraving"
+                    price="$170"
+                />
+                <JewelryCard
+                    prodactName="Engraved gold ring"
+                    nickName="Yellow gold, engraving"
+                    price="$170"
+                />
+                <JewelryCard
+                    prodactName="Engraved gold ring"
+                    nickName="Yellow gold, engraving"
+                    price="$170"
+                />
+                <JewelryCard
+                    prodactName="Engraved gold ring"
+                    nickName="Yellow gold, engraving"
+                    price="$170"
+                />
+                <JewelryCard
+                    prodactName="Engraved gold ring"
+                    nickName="Yellow gold, engraving"
+                    price="$170"
+                />
             </div>
-        </Contauner>
+
+            <div className="buttonWrapper">
+                <button className="button">EXPLORE MORE</button>
+            </div>
+        </Container>
     );
 };
 
 export default Filter;
 
-const Contauner = styled.div`
-    margin-top: 88px;
+const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 48px;
+
     h3 {
         font-weight: 500px;
         text-decoration: underline solid 2px;
     }
-    .imgWrapper {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
 
-        img {
-            width: 300px;
-            height: 300px;
-            background-color: #0b9cdf;
-        }
-        .buttonWrapper {
-            width: 79%;
-            display: flex;
-            justify-content: center;
-            button {
-                padding: 14px 80px;
-                background-color: transparent;
-                border: 1px solid #000000;
-            }
+    .cardsWrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 16px;
+        grid-row-gap: 48px;
+    }
+
+    .buttonWrapper {
+        display: flex;
+        justify-content: center;
+
+        .button {
+            padding: 14px 80px;
+            border: 1px solid #000000;
+            background-color: transparent;
         }
     }
 `;

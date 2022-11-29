@@ -12,32 +12,43 @@ const ShopPage = () => {
     return (
         <Component>
             <Navigation />
-            <ShopCategorise />
-            <div className="contentWrapper">
-                <ShopItAll />
-                <img src="/images/AdvertisamentBanner.png.png" alt="#" className="img" />
-                <Filter />
+
+            <div className="motherDiv">
+                <div className="categoriseWrapper">
+                    <ShopCategorise />
+                </div>
+
+                <div className="contentWrapper">
+                    <ShopItAll />
+                    <img src="/images/AdvertisamentBanner.png.png" alt="#" className="img" />
+                    <Filter />
+                </div>
             </div>
+
             <div className="greenSection">
                 <div>
                     <CarIcon />
                     <p>Free Shipping on</p>
                     <p>Orders over $100</p>
                 </div>
+
                 <div>
                     <ReturnIcon />
                     <p>Free 60-Day Returns</p>
                 </div>
+
                 <div>
                     <ShieldIcon />
                     <p>2-Year Warranty</p>
                 </div>
+
                 <div>
                     <CardIcon />
                     <p>Shop Now, play Later</p>
                     <p>With Klarna</p>
                 </div>
             </div>
+
             <MoreWaysToBrows />
 
             <Footer />
@@ -51,16 +62,33 @@ const Component = styled.div`
     display: flex;
     flex-direction: column;
 
-    .contentWrapper {
-        margin-top: 32px;
-        margin-left: 25vw;
+    .motherDiv {
+        padding: 0 48px;
+        margin-top: 54px;
 
-        .img {
-            margin-top: 130px;
-            width: 100%;
-            padding-right: 40px;
+        display: flex;
+        gap: 48px;
+
+        .categoriseWrapper {
+            min-width: max-content;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 20vw;
+        }
+
+        .contentWrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+            width: 80vw;
+
+            .img {
+                width: 100%;
+            }
         }
     }
+
     .greenSection {
         margin-top: 40px;
         padding: 32px 0;
@@ -70,12 +98,17 @@ const Component = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+
         div {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 13px;
             cursor: pointer;
+        }
+
+        div:hover p {
+            color: gray;
         }
     }
 
@@ -97,3 +130,9 @@ const Component = styled.div`
         }
     }
 `;
+
+// {/* <div className="contentWrapper">
+//                 <ShopItAll />
+//                 <img src="/images/AdvertisamentBanner.png.png" alt="#" className="img" />
+//                 <Filter />
+//             </div> */}

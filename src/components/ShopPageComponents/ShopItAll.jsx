@@ -1,16 +1,19 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
+import styled from "styled-components";
 import "swiper/css";
 import "swiper/css/pagination";
-import styled from "styled-components";
+import JewelryCard from "../HomePageComponents/JewelryCard";
 
 const ShopItAll = () => {
     return (
         <Component>
             <h1>SHOP IT ALL</h1>
+
             <Swiper
                 className="swiper scrollJewelryWrapper"
                 modules={[Pagination]}
+                loop
                 spaceBetween={16}
                 slidesPerView={1}
                 breakpoints={{
@@ -19,29 +22,35 @@ const ShopItAll = () => {
                     1400: { slidesPerView: 4 },
                 }}
             >
-                <SwiperSlide className="singleScrolJewelryItem">
-                    <img src="/images/Rectangle 22.png" alt="error" />
-                    <p>Engraved gold ring</p>
+                <SwiperSlide>
+                    <JewelryCard prodactName="Engraved gold ring" />
                 </SwiperSlide>
-                <SwiperSlide className="singleScrolJewelryItem">
-                    <img src="/images/Rectangle 22.png" alt="error" />
-                    <p>Engraved gold ring</p>
+                <SwiperSlide>
+                    <JewelryCard prodactName="Engraved gold ring" />
                 </SwiperSlide>
-                <SwiperSlide className="singleScrolJewelryItem">
-                    <img src="/images/Rectangle 22.png" alt="error" />
-                    <p>Engraved gold ring</p>
+                <SwiperSlide>
+                    <JewelryCard prodactName="Engraved gold ring" />
                 </SwiperSlide>
-                <SwiperSlide className="singleScrolJewelryItem">
-                    <img src="/images/Rectangle 22.png" alt="error" />
-                    <p>Engraved gold ring</p>
+                <SwiperSlide>
+                    <JewelryCard prodactName="Engraved gold ring" />
                 </SwiperSlide>
-                <SwiperSlide className="singleScrolJewelryItem">
-                    <img src="/images/Rectangle 22.png" alt="error" />
-                    <p>Engraved gold ring</p>
+                <SwiperSlide>
+                    <JewelryCard prodactName="Engraved gold ring" />
                 </SwiperSlide>
-                <SwiperSlide className="singleScrolJewelryItem">
-                    <img src="/images/Rectangle 22.png" alt="error" />
-                    <p>Engraved gold ring</p>
+                <SwiperSlide>
+                    <JewelryCard prodactName="Engraved gold ring" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <JewelryCard prodactName="Engraved gold ring" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <JewelryCard prodactName="Engraved gold ring" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <JewelryCard prodactName="Engraved gold ring" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <JewelryCard prodactName="Engraved gold ring" />
                 </SwiperSlide>
             </Swiper>
         </Component>
@@ -51,7 +60,6 @@ const ShopItAll = () => {
 export default ShopItAll;
 
 const Component = styled.div`
-    margin-top: 32px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -61,29 +69,14 @@ const Component = styled.div`
         font-size: 40px;
         line-height: 44px;
     }
+
     .scrollJewelryWrapper {
+        max-width: 80vw;
         padding: 0 80px;
-        margin: 0 -80px;
+        margin-right: -48px;
         display: flex;
-        gap: 16px;
-
-        .singleScrolJewelryItem {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-
-            img {
-                height: 300px;
-                aspect-ratio: 1 / 1;
-                object-fit: cover;
-                object-position: center;
-            }
-
-            p {
-                font-weight: 600;
-            }
-        }
     }
+
     @media (max-width: 1030px) {
         h1 {
             text-align: center;

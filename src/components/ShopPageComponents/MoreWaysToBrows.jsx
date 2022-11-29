@@ -24,7 +24,6 @@ export default MoreWaysToBrows;
 
 const Component = styled.div`
     height: 100%;
-    margin: 32px 0;
     padding: 0 80px 32px 80px;
     display: flex;
     flex-direction: column;
