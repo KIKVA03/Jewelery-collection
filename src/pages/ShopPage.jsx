@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import Navigation from "../components/HomePageComponents/Navigation";
 import ShopCategorise from "../components/ShopPageComponents/ShopCategorise";
 import styled from "styled-components";
@@ -9,6 +9,17 @@ import MoreWaysToBrows from "../components/ShopPageComponents/MoreWaysToBrows";
 import Filter from "../components/ShopPageComponents/Filter";
 
 const ShopPage = () => {
+    const [showCategorise, setShowCategorise] = useState(false);
+    const [className, setClassName] = useState("Hidden");
+    const modifyClass = () => {
+        if (showCategorise === false) {
+            setShowCategorise(true);
+            setClassName("Shown");
+        } else {
+            setShowCategorise(false);
+            setClassName("Hidden");
+        }
+    };
     return (
         <Component>
             <Navigation />
@@ -52,6 +63,28 @@ const ShopPage = () => {
             <MoreWaysToBrows />
 
             <Footer />
+            <div className={className}>
+                <ul>
+                    <li>New Arrival</li>
+                    <li>Best Sellers</li>
+                    <li>Shop All</li>
+                    <li>Earrings</li>
+                    <li>Single Earrings</li>
+                    <li>Rings</li>
+                    <li>Necklaces</li>
+                    <li>Necklaces</li>
+                    <li>Braclets + Ankles</li>
+                    <li>Charms + Pendants</li>
+                    <li>Wedding</li>
+                    <li>Men's</li>
+                    <li>Lifestyle</li>
+                    <li>Jewelry Care Kit</li>
+                </ul>
+            </div>
+
+            <button className="categoriseButton" onClick={modifyClass}>
+                CLICK
+            </button>
         </Component>
     );
 };
@@ -111,6 +144,40 @@ const Component = styled.div`
             color: gray;
         }
     }
+    .categoriseButton {
+        padding: 35px;
+        bottom: 0;
+        background-color: lightgrey;
+        border: 0;
+        border-radius: 50%;
+        display: none;
+        position: fixed;
+        z-index: 20;
+        cursor: pointer;
+    }
+
+    .Hidden {
+        display: none;
+        animation: rightToLeft 1s;
+    }
+    .Shown {
+        width: 100%;
+        background-color: red;
+        top: 54px;
+        position: fixed;
+        display: flex;
+        z-index: 20;
+        animation: leftToRight 1s;
+        ul {
+            li {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                list-style: none;
+                cursor: pointer;
+            }
+        }
+    }
 
     @media (max-width: 1030px) {
         .motherDiv {
@@ -125,6 +192,9 @@ const Component = styled.div`
                 justify-content: center;
             }
         }
+        .categoriseButton {
+            display: flex;
+        }
     }
     @media (max-width: 650px) {
         .greenSection {
@@ -134,6 +204,22 @@ const Component = styled.div`
             gap: 16px;
             justify-content: center;
             align-items: center;
+        }
+    }
+    @keyframes leftToRight {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes rightToLeft {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
         }
     }
 `;
