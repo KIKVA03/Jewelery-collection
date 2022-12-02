@@ -28,6 +28,7 @@ const Container = styled.div`
     flex-direction: column;
     gap: 13px;
     animation: leftToRight 1s;
+    z-index: 20;
     div {
         display: flex;
         flex-direction: column;
