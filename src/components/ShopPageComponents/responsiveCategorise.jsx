@@ -56,9 +56,33 @@ export default ResponsiveCategorise;
 
 const Component = styled.div`
     .Hidden {
-        display: none;
-
-        animation: FromTopToDown 1s;
+        padding: 10px 30px;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 20px;
+        position: fixed;
+        top: 54px;
+        display: flex;
+        justify-content: space-between;
+        z-index: 20;
+        animation: FromTopToDown 1s forwards;
+        ul {
+            li {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                list-style: none;
+                cursor: pointer;
+            }
+        }
+        .XButton {
+            height: max-content;
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+        }
     }
     .Shown {
         padding: 10px 30px;
@@ -72,7 +96,7 @@ const Component = styled.div`
         display: flex;
         justify-content: space-between;
         z-index: 20;
-        animation: downToUp 1s;
+        animation: downToUp 1s forwards;
         ul {
             li {
                 font-weight: 400;
@@ -109,20 +133,18 @@ const Component = styled.div`
     }
     @keyframes downToUp {
         from {
-            transform: translatey(100%);
+            transform: translateY(100%);
         }
         to {
-            transform: translatey(0);
+            transform: translateY(0);
         }
     }
     @keyframes FromTopToDown {
         from {
-            transform: translatey(0);
-            display: none;
+            transform: translateY(0%);
         }
         to {
-            transform: translatey(100%);
-            display: none;
+            transform: translateY(100%);
         }
     }
 `;
