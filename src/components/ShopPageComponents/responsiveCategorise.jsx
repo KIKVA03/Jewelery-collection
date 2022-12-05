@@ -6,7 +6,7 @@ const ResponsiveCategorise = () => {
     const [showCategorise, setShowCategorise] = useState(false);
     const [className, setClassName] = useState("Hidden");
     const [buttonsClass, setButtonClass] = useState("buttonShown");
-    const modifyClass = () => {
+    const modifyClass = event => {
         if (showCategorise === false) {
             setShowCategorise(true);
             setClassName("Shown");
@@ -46,7 +46,7 @@ const ResponsiveCategorise = () => {
             </div>
 
             <button className={buttonsClass} onClick={modifyClass}>
-                CLICK
+                FILTER
             </button>
         </Component>
     );

@@ -31,6 +31,8 @@ const BurgerIcon = () => {
 export default BurgerIcon;
 
 const Container = styled.div`
+    padding: 4px;
+    background-color: white;
     .burgerWrapper {
         height: 100%;
         background-color: white;
@@ -38,6 +40,7 @@ const Container = styled.div`
         display: flex;
         flex-direction: column;
         gap: 4px;
+        cursor: pointer;
 
         .burgerBar {
             height: 2px;
