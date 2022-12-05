@@ -1,10 +1,14 @@
 import { memo } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import "./ShopPageComponents/responsiveCategorise";
 
-const MobileNavigation = ({ toggleMobileNavBar }) => {
+const MobileNavigation = ({ isShownResponsiveNavigation }) => {
     return (
-        <Container>
+        <Container
+            // hide={isShownResponsiveNavigation}
+            className={`initial ${isShownResponsiveNavigation}`}
+        >
             <div>
                 <Link to="/Shop" className="mobileNavLinks">
                     SHOP
@@ -16,10 +20,12 @@ const MobileNavigation = ({ toggleMobileNavBar }) => {
     );
 };
 
+export default memo(MobileNavigation);
+
 const Container = styled.div`
     padding: 20px 0;
     width: 100vw;
-    height: calc(100vh - 54px);
+    height: 100vh;
     background: #ffffff;
     position: fixed;
     top: 54px;
@@ -27,8 +33,16 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 13px;
-    animation: leftToRight 1s;
-    z-index: 20;
+    transition: 1s;
+
+    &.shown {
+        /* animation: leftToRight 1s; */
+        transform: translateX(0%);
+    }
+    &.hidden {
+        transform: translateX(-100%);
+    }
+
     div {
         display: flex;
         flex-direction: column;
@@ -41,15 +55,4 @@ const Container = styled.div`
             border-bottom: 0.5px solid black;
         }
     }
-
-    @keyframes leftToRight {
-        from {
-            transform: translateX(-100%);
-        }
-        to {
-            transform: translateX(0);
-        }
-    }
 `;
-
-export default memo(MobileNavigation);

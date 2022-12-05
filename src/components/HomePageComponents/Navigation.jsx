@@ -1,4 +1,4 @@
-import { useState, useCallback, memo } from "react";
+import { useState, memo } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { LogoIcon, CartIcon, SarchIcon, UserIcon, BurgerIcon } from "../icons";
@@ -7,13 +7,13 @@ import MobileNavigation from "../MobileNavigation";
 const Navigation = () => {
     const [isMobileNavShown, setIsMobileNavShown] = useState(false);
 
-    const toggleMobileNavBar = useCallback(() => {
+    const toggleMobileNavBar = () => {
         setIsMobileNavShown(prev => !prev);
-    }, []);
+    };
 
     return (
         <Component>
-            {isMobileNavShown && <MobileNavigation toggleMobileNavBar={toggleMobileNavBar} />}
+            <MobileNavigation isShownResponsiveNavigation={isMobileNavShown ? "shown" : "hidden"} />
 
             <nav className="navigation">
                 <button className="burgerMenu" onClick={toggleMobileNavBar}>

@@ -4,7 +4,7 @@ import { Xicon } from "../icons";
 
 const ResponsiveCategorise = () => {
     const [showCategorise, setShowCategorise] = useState(false);
-    const [className, setClassName] = useState("Hidden");
+    const [className, setClassName] = useState("");
     const [buttonsClass, setButtonClass] = useState("buttonShown");
     const modifyClass = event => {
         if (showCategorise === false) {
@@ -22,7 +22,7 @@ const ResponsiveCategorise = () => {
     };
     return (
         <Component>
-            <div className={className}>
+            <div className={`inactive ${className}`}>
                 <ul>
                     <li>New Arrival</li>
                     <li>Best Sellers</li>
@@ -55,7 +55,7 @@ const ResponsiveCategorise = () => {
 export default ResponsiveCategorise;
 
 const Component = styled.div`
-    .Hidden {
+    .inactive {
         padding: 10px 30px;
         width: 100%;
         height: 100%;
@@ -67,7 +67,9 @@ const Component = styled.div`
         display: flex;
         justify-content: space-between;
         z-index: 20;
-        animation: FromTopToDown 1s forwards;
+        transition: 1s;
+        transform: translateY(100%);
+
         ul {
             li {
                 font-weight: 400;
@@ -84,34 +86,11 @@ const Component = styled.div`
             cursor: pointer;
         }
     }
+    .Hidden {
+        transform: translateY(100%);
+    }
     .Shown {
-        padding: 10px 30px;
-        width: 100%;
-        height: 100%;
-        background-color: white;
-        border: 1px solid black;
-        border-radius: 20px;
-        position: fixed;
-        top: 54px;
-        display: flex;
-        justify-content: space-between;
-        z-index: 20;
-        animation: downToUp 1s forwards;
-        ul {
-            li {
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 22px;
-                list-style: none;
-                cursor: pointer;
-            }
-        }
-        .XButton {
-            height: max-content;
-            background-color: transparent;
-            border: 0;
-            cursor: pointer;
-        }
+        transform: translateY(0%);
     }
 
     .buttonShown {
@@ -129,22 +108,6 @@ const Component = styled.div`
     @media (max-width: 1030px) {
         .buttonShown {
             display: flex;
-        }
-    }
-    @keyframes downToUp {
-        from {
-            transform: translateY(100%);
-        }
-        to {
-            transform: translateY(0);
-        }
-    }
-    @keyframes FromTopToDown {
-        from {
-            transform: translateY(0%);
-        }
-        to {
-            transform: translateY(100%);
         }
     }
 `;
